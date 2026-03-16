@@ -38,11 +38,6 @@ academic_work_impact = st.selectbox(
     ["None", "Mild", "Moderate", "Severe"]
 )
 
-addiction_level = st.selectbox(
-    "Addiction Level",
-    ["None", "Mild", "Moderate", "Severe"]
-)
-
 # -------- PREDICTION -------- #
 
 if st.button("Predict"):
@@ -60,7 +55,6 @@ if st.button("Predict"):
         "weekend_screen_time":[weekend_screen_time],
         "stress_level":[stress_level],
         "academic_work_impact":[academic_work_impact],
-        "addiction_level":[addiction_level]
     })
 
     prediction = model.predict(input_data)
